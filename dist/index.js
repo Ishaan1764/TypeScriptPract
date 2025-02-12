@@ -114,3 +114,18 @@ const usss = new Map();
 usss.set("sd", { name: 'a', email: 'b', pass: 'd' });
 const use = usss.get("sd");
 console.log(use);
+//ZOD infer: Zod is used inbacked to check the correct credential formalts:
+// z is importesd as ZOd
+/*
+    const userProfile=z.object({
+    name:z.string().min(1)
+    ......
+})
+
+type FinalSchema=z.infer<typeof userProfile>
+
+app.put("/user",(req,res)=>{
+    const {success}= userProfile.safePArse(req.body);
+    const updateBody:FinalSchema=req.body // used here
+})
+*/
